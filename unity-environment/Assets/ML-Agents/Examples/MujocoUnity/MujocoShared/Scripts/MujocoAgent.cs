@@ -35,6 +35,9 @@ namespace MujocoUnity
         [Tooltip("Function which collections observations")]
         /**< \brief Function which collections observations*/
         protected Action ObservationsFunction;
+        [Tooltip("Optional Function for additional reward at end of Episode")]
+        /**< \brief Optional Function for additional reward at end of Episode*/
+        protected Func<float> OnEpisodeCompleteGetRewardFunction;
         [Tooltip("Helper for tracking body parts")]
         /**< \brief Helper for tracking body parts*/
         protected Dictionary<string,Rigidbody> BodyParts = new Dictionary<string,Rigidbody>();
@@ -95,6 +98,8 @@ namespace MujocoUnity
         List<float> qpos;
         List<float> qglobpos;
         List<float> qvel;
+        List<float> recentVelocity;
+
 
 
 
@@ -150,6 +155,7 @@ namespace MujocoUnity
             SetupMujoco();
             UpdateQ();
             _hasValidModel = true;
+            recentVelocity = new List<float>();
         }
         void SetupMujoco()
         {
@@ -190,17 +196,19 @@ namespace MujocoUnity
             
             if (!IsDone())
             {
-                var done = TerminateFunction();
+                bool done = TerminateFunction();
 
                 if (done)
                 {
                     Done();
                     SetReward(OnTerminateRewardValue);
                 }
-                else {
-                    var reward = StepRewardFunction();
-                    SetReward(reward);
+                else if (StepRewardFunction!=null){
+                    SetReward(StepRewardFunction());
                 }
+                done |= (this.GetStepCount() >= agentParameters.maxStep && agentParameters.maxStep > 0);
+                if (done && OnEpisodeCompleteGetRewardFunction != null)
+                    AddReward(OnEpisodeCompleteGetRewardFunction());
             }
 
             FootHitTerrain = false;
@@ -230,6 +238,14 @@ namespace MujocoUnity
                 lowestFoot = feetYpos[0];
 			var height = FocalPoint.transform.position.y - lowestFoot;
             return height;
+        }
+        internal float GetAverageVelocity(string bodyPart = null)
+        {
+            var v = GetVelocity(bodyPart);
+            recentVelocity.Add(v);
+            if (recentVelocity.Count >= 10)
+                recentVelocity.RemoveAt(0);
+            return recentVelocity.Average();
         }
         internal float GetVelocity(string bodyPart = null)
         {
