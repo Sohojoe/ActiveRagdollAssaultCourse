@@ -49,7 +49,8 @@ public class AssaultCourse003Agent : MujocoAgent {
         float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
         List<Ray> rays = Enumerable.Range(0, 50).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
         List<float> distances = rays.Select
-            ( x=> 
+            ( x=>
+                5f -  
                 Physics.RaycastAll(x,10f)
                 .OrderBy(y=>y.distance)
                 .First()
@@ -57,7 +58,7 @@ public class AssaultCourse003Agent : MujocoAgent {
             ).ToList();
         if (Application.isEditor && ShowMonitor)
         {
-            var view = distances.Skip(10).Take(20).Select(x=>1f-(x/5f)).ToList();
+            var view = distances.Skip(10).Take(20).Select(x=>x).ToList();
             Monitor.Log("distances", view.ToArray());
             var time = Time.deltaTime;
             time *= agentParameters.numberOfActionsBetweenDecisions;
