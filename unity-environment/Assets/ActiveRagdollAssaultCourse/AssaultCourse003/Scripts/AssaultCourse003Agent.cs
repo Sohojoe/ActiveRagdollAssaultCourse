@@ -43,6 +43,20 @@ public class AssaultCourse003Agent : MujocoAgent {
         AddVectorObs(JointVelocity);
         var foot = BodyParts["foot"];
         AddVectorObs(foot.transform.position.y);
+
+        var xpos = foot.transform.position.x;
+        xpos -= 2f;
+        float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
+        List<Ray> rays = Enumerable.Range(0, 50).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
+        List<float> distances = rays.Select
+            ( x=> 
+                Physics.RaycastAll(x,10f)
+                .OrderBy(y=>y.distance)
+                .First()
+                .distance
+            ).ToList();
+        AddVectorObs(distances);
+        AddVectorObs(fraction);
     }
 
     float StepRewardHopper101()
