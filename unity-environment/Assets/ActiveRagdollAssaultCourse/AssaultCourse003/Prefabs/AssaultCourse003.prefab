@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4132043790615226}
   - component: {fileID: 114269483692438478}
   - component: {fileID: 114864102614508124}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: AssaultCourse003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

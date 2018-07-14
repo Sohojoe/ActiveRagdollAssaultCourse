@@ -28,7 +28,7 @@ public class AssaultCourse003Agent : MujocoAgent {
     public override void AgentOnDone()
     {
 
-    }
+    }    
     void ObservationsDefault()
     {
         if (ShowMonitor) {
@@ -55,6 +55,17 @@ public class AssaultCourse003Agent : MujocoAgent {
                 .First()
                 .distance
             ).ToList();
+        if (Application.isEditor && ShowMonitor)
+        {
+            var view = distances.Skip(10).Take(20).Select(x=>1f-(x/5f)).ToList();
+            Monitor.Log("distances", view.ToArray());
+            var time = Time.deltaTime;
+            time *= agentParameters.numberOfActionsBetweenDecisions;
+            for (int i = 0; i < rays.Count; i++)
+            {
+                Debug.DrawRay(rays[i].origin, rays[i].direction*distances[i], Color.yellow, time, true);
+            }
+        }        
         AddVectorObs(distances);
         AddVectorObs(fraction);
     }
