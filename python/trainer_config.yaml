@@ -33,9 +33,9 @@ AssaultCourse003Brain:
     use_recurrent: false
     normalize: true
     num_layers: 2
+    hidden_units: 400
     batch_size: 2048
     buffer_size: 10240
-    hidden_units: 256
     max_steps: 3e5
 
 AssaultCourse001Brain:
