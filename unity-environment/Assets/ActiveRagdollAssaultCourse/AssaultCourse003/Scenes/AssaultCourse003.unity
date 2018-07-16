@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 82
+    vectorObservationSize: 31
     numStackedVectorObservations: 1
     vectorActionSize: 4
     cameraResolutions: []
@@ -695,7 +695,7 @@ MonoBehaviour:
     - 
     - 
     vectorActionSpaceType: 1
-  brainType: 2
+  brainType: 3
   CoreBrains:
   - {fileID: 456600583}
   - {fileID: 821141699}

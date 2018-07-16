@@ -7,6 +7,8 @@ using UnityEngine;
 using MLAgents;
 
 public class AssaultCourse003Agent : MujocoAgent {
+
+    Terrain terrain;
     public override void AgentReset()
     {
         base.AgentReset();
@@ -22,6 +24,28 @@ public class AssaultCourse003Agent : MujocoAgent {
         BodyParts["pelvis"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="torso");
         BodyParts["foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="foot");
         base.SetupBodyParts();
+        if (this.terrain == null)
+            this.terrain = Terrain.activeTerrain;
+        print($"HeightMap {this.terrain.terrainData.heightmapWidth}, {this.terrain.terrainData.heightmapHeight}. Scale {this.terrain.terrainData.heightmapScale}. Resolution {this.terrain.terrainData.heightmapResolution}");
+
+        // get the normalized position of this game object relative to the terrain
+        Vector3 tempCoord = (transform.position - terrain.gameObject.transform.position);
+        Vector3 coord;
+        coord.x = tempCoord.x / terrain.terrainData.size.x;
+        coord.y = tempCoord.y / terrain.terrainData.size.y;
+        coord.z = tempCoord.z / terrain.terrainData.size.z;
+        // get the position of the terrain heightmap where this game object is
+        int posXInTerrain = (int) (coord.x * terrain.terrainData.heightmapWidth); 
+        int posYInTerrain = (int) (coord.z * terrain.terrainData.heightmapHeight);
+        // we set an offset so that all the raising terrain is under this game object
+        int offset = 0 / 2;
+        // get the heights of the terrain under this game object
+        float[,] heights = terrain.terrainData.GetHeights(posXInTerrain-offset,posYInTerrain-offset, 100,1);
+        
+        // set the new height
+        terrain.terrainData.SetHeights(posXInTerrain-offset,posYInTerrain-offset,heights);
+        heights[0,0] = 0f;//.1f/600f;
+        this.terrain.terrainData.SetHeights(posXInTerrain, posYInTerrain, heights);
     }
 
 
