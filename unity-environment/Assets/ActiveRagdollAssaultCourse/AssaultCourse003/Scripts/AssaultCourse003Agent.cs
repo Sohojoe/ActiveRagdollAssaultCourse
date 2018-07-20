@@ -71,7 +71,7 @@ public class AssaultCourse003Agent : MujocoAgent {
         var xpos = foot.transform.position.x;
         xpos -= 2f;
         float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
-        List<Ray> rays = Enumerable.Range(0, 50).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
+        List<Ray> rays = Enumerable.Range(0, 5*5).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
         List<float> distances = rays.Select
             ( x=>
                 5f -  
@@ -88,7 +88,7 @@ public class AssaultCourse003Agent : MujocoAgent {
             time *= agentParameters.numberOfActionsBetweenDecisions;
             for (int i = 0; i < rays.Count; i++)
             {
-                Debug.DrawRay(rays[i].origin, rays[i].direction*distances[i], Color.yellow, time, true);
+                Debug.DrawRay(rays[i].origin, rays[i].direction*(5f-distances[i]), Color.yellow, time, true);
             }
         }        
         AddVectorObs(distances);
@@ -104,6 +104,10 @@ public class AssaultCourse003Agent : MujocoAgent {
         // var effortPenality = 1e-2f * (float)effort;
         var effortPenality = 3e-1f * (float)effort;
         var jointsAtLimitPenality = GetJointsAtLimitPenality() * 4;
+
+        //var uprightScaler = Mathf.Clamp(velocity,0,1);
+        //uprightBonus *= 0f;//uprightScaler;
+        uprightBonus *= .1f;//uprightScaler;
 
         var reward = velocity
             +uprightBonus
