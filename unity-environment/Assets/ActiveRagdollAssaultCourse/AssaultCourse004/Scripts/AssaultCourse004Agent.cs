@@ -70,13 +70,13 @@ public class AssaultCourse004Agent : MujocoAgent {
         xpos -= 2f;
         float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
         float ypos = foot.transform.position.y;
-        List<Ray> rays = Enumerable.Range(0, 5*5).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
+        List<Ray> rays = Enumerable.Range(0, 5*5).Select(x => new Ray(new Vector3(xpos+(x*.2f), AssaultCourse004TerrainAgent._maxHeight, 0f), Vector3.down)).ToList();
         List<float> distances = rays.Select
             ( x=>
-                ypos - (5f - 
-                Physics.RaycastAll(x,10f)
+                ypos - (AssaultCourse004TerrainAgent._maxHeight - 
+                Physics.RaycastAll(x)
                 .OrderBy(y=>y.distance)
-                .First()
+                .FirstOrDefault()
                 .distance)
             ).ToList();
         if (Application.isEditor && ShowMonitor)

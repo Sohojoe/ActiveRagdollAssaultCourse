@@ -18,6 +18,9 @@ public class AssaultCourse004TerrainAgent : Agent {
 	float _curHeight;
 	float _actionReward;
 
+	internal const float _maxHeight = 10f;
+	const float _midHeight = 5f;
+	float _mapScaleY;
 
 	public override void AgentReset()
 	{
@@ -27,11 +30,11 @@ public class AssaultCourse004TerrainAgent : Agent {
 		if (this._assaultCourse004Agent == null)
 			_assaultCourse004Agent = GetComponent<AssaultCourse004Agent>();
         print($"HeightMap {this.terrain.terrainData.heightmapWidth}, {this.terrain.terrainData.heightmapHeight}. Scale {this.terrain.terrainData.heightmapScale}. Resolution {this.terrain.terrainData.heightmapResolution}");
-        
+        _mapScaleY = this.terrain.terrainData.heightmapScale.y;
 		// get the normalized position of this game object relative to the terrain
         Vector3 tempCoord = (transform.position - terrain.gameObject.transform.position);
         Vector3 coord;
-        coord.x = tempCoord.x / terrain.terrainData.size.x;
+        coord.x = (tempCoord.x-1) / terrain.terrainData.size.x;
         coord.y = tempCoord.y / terrain.terrainData.size.y;
         coord.z = tempCoord.z / terrain.terrainData.size.z;
         // get the position of the terrain heightmap where this game object is
@@ -41,7 +44,7 @@ public class AssaultCourse004TerrainAgent : Agent {
         int offset = 0 / 2;
         // get the heights of the terrain under this game object
         _heights = terrain.terrainData.GetHeights(_posXInTerrain-offset,_posYInTerrain-offset, 100,1);
-		_curHeight = 0f;
+		_curHeight = _midHeight;
 		_heightIndex = 0;
 		_actionReward = 0f;
 
@@ -54,6 +57,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 		SetNextHeight(0);
 		SetNextHeight(0);
 		SetNextHeight(0);
+		SetNextHeight(0);
 
 		lastSteps = _assaultCourse004Agent.GetStepCount();
 		//RequestDecision();
@@ -63,7 +67,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 	{
 		for (int i = 0; i < _heights.Length; i++)
 		{
-			_heights[0,i] = 0f;
+			_heights[0,i] = _midHeight / _mapScaleY;
 		}
         this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain, _heights);
 	}
@@ -82,7 +86,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 			}
 		}
 
-		_heights[0,_heightIndex] = _curHeight/600f;
+		_heights[0,_heightIndex] = _curHeight / _mapScaleY;
         this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain, _heights);
 
 		_heightIndex++;
