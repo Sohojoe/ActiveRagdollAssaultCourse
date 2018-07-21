@@ -107,7 +107,6 @@ public class AssaultCourse003Agent : MujocoAgent {
 
         //var uprightScaler = Mathf.Clamp(velocity,0,1);
         //uprightBonus *= 0f;//uprightScaler;
-        uprightBonus *= .1f;//uprightScaler;
 
         var reward = velocity
             +uprightBonus
