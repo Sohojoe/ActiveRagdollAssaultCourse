@@ -51,7 +51,7 @@ public class AssaultCourse004Agent : MujocoAgent {
     public override void AgentOnDone()
     {
     }    
-    void ObservationsDefault()
+        void ObservationsDefault()
     {
         if (ShowMonitor) {
         }
@@ -69,14 +69,15 @@ public class AssaultCourse004Agent : MujocoAgent {
         var xpos = foot.transform.position.x;
         xpos -= 2f;
         float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
+        float ypos = foot.transform.position.y;
         List<Ray> rays = Enumerable.Range(0, 5*5).Select(x => new Ray(new Vector3(xpos+(x*.2f), 5f, 0f), Vector3.down)).ToList();
         List<float> distances = rays.Select
             ( x=>
-                5f -  
+                ypos - (5f - 
                 Physics.RaycastAll(x,10f)
                 .OrderBy(y=>y.distance)
                 .First()
-                .distance
+                .distance)
             ).ToList();
         if (Application.isEditor && ShowMonitor)
         {
@@ -86,7 +87,11 @@ public class AssaultCourse004Agent : MujocoAgent {
             time *= agentParameters.numberOfActionsBetweenDecisions;
             for (int i = 0; i < rays.Count; i++)
             {
-                Debug.DrawRay(rays[i].origin, rays[i].direction*(5f-distances[i]), Color.yellow, time, true);
+                var distance = distances[i];
+                var origin = new Vector3(rays[i].origin.x, ypos,0f);
+                var direction = distance > 0 ? Vector3.down : Vector3.up;
+                var color = distance > 0 ? Color.yellow : Color.red;
+                Debug.DrawRay(origin, direction*Mathf.Abs(distance), color, time, false);
             }
         }        
         AddVectorObs(distances);
