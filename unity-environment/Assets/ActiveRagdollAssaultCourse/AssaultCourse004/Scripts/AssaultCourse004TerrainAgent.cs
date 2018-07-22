@@ -96,6 +96,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 	}
 	internal void OnNextMeter()
 	{
+		AddReward(1);
 		AddReward(_actionReward);
 		_actionReward = 0f;
 		RequestDecision();

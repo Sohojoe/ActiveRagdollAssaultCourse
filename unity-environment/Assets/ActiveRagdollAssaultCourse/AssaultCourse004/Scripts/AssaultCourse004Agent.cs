@@ -14,9 +14,12 @@ public class AssaultCourse004Agent : MujocoAgent {
     {
         base.AgentReset();
 
+        BodyParts["pelvis"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="torso");
+        BodyParts["foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="foot");
+
         if (_assaultCourse004TerrainAgent == null)
             _assaultCourse004TerrainAgent = GetComponent<AssaultCourse004TerrainAgent>();
-        _lastXPosInMeters = (int) FocalPoint.transform.position.x;
+        _lastXPosInMeters = (int) (int) BodyParts["foot"].transform.position.x;
         _assaultCourse004TerrainAgent.Terminate(false);
 
         // set to true this to show monitor while training
@@ -27,14 +30,12 @@ public class AssaultCourse004Agent : MujocoAgent {
         ObservationsFunction = ObservationsDefault;
         // OnTerminateRewardValue = -100f;
 
-        BodyParts["pelvis"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="torso");
-        BodyParts["foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="foot");
         base.SetupBodyParts();
     }
 
     bool LocalTerminateOnNonFootHitTerrain()
     {
-        int newXPosInMeters = (int) FocalPoint.transform.position.x;
+        int newXPosInMeters = (int) BodyParts["foot"].transform.position.x;
         if (newXPosInMeters > _lastXPosInMeters) {
             _assaultCourse004TerrainAgent.OnNextMeter();
             _lastXPosInMeters = newXPosInMeters;
