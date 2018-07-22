@@ -70,6 +70,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 			_heights[0,i] = _midHeight / _mapScaleY;
 		}
         this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain, _heights);
+        this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain+1, _heights);
 	}
 
 	void SetNextHeight(int action)
@@ -88,6 +89,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 
 		_heights[0,_heightIndex] = _curHeight / _mapScaleY;
         this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain, _heights);
+        this.terrain.terrainData.SetHeights(_posXInTerrain, _posYInTerrain+1, _heights);
 
 		_heightIndex++;
 		_actionReward = actionSize;
