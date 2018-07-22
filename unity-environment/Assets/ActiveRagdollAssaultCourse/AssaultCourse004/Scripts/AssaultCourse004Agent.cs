@@ -35,7 +35,7 @@ public class AssaultCourse004Agent : MujocoAgent {
     bool LocalTerminateOnNonFootHitTerrain()
     {
         int newXPosInMeters = (int) FocalPoint.transform.position.x;
-        if (newXPosInMeters != _lastXPosInMeters) {
+        if (newXPosInMeters > _lastXPosInMeters) {
             _assaultCourse004TerrainAgent.OnNextMeter();
             _lastXPosInMeters = newXPosInMeters;
         }
