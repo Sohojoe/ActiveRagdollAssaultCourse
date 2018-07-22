@@ -21,6 +21,28 @@ default:
     curiosity_strength: 0.01
     curiosity_enc_size: 128
 
+
+AssaultCourse004Brain:
+    beta: 1.0e-2
+    learning_rate: 1.0e-3
+    time_horizon: 1000
+    summary_freq: 1000
+    normalize: true
+    num_layers: 2
+    hidden_units: 256
+    batch_size: 2048
+    buffer_size: 10240
+    max_steps: 3e5
+AssaultCourse004TerrainBrain:
+    use_recurrent: true
+    sequence_length: 64
+    normalize: true
+    num_layers: 2
+    hidden_units: 64
+    memory_size: 256
+    max_steps: 3e5
+
+
 AssaultCourse003Brain:
     beta: 1.0e-2
     learning_rate: 1.0e-3
