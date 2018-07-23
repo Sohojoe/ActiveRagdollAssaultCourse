@@ -24,7 +24,7 @@ default:
 
 AssaultCourse004Brain:
     beta: 1.0e-2
-    learning_rate: 1.0e-3
+    # learning_rate: 1.0e-3
     time_horizon: 1000
     summary_freq: 1000
     normalize: true

@@ -10,6 +10,7 @@ public class AssaultCourse004Agent : MujocoAgent {
 
     AssaultCourse004TerrainAgent _assaultCourse004TerrainAgent;
     int _lastXPosInMeters;
+    float _pain;
     public override void AgentReset()
     {
         base.AgentReset();
@@ -26,14 +27,15 @@ public class AssaultCourse004Agent : MujocoAgent {
         Monitor.SetActive(true);
 
         StepRewardFunction = StepRewardHopper101;
-        TerminateFunction = LocalTerminateOnNonFootHitTerrain;
+        TerminateFunction = LocalTerminate;
         ObservationsFunction = ObservationsDefault;
         // OnTerminateRewardValue = -100f;
+        _pain = 0f;
 
         base.SetupBodyParts();
     }
 
-    bool LocalTerminateOnNonFootHitTerrain()
+    bool LocalTerminate()
     {
         int newXPosInMeters = (int) BodyParts["foot"].transform.position.x;
         if (newXPosInMeters > _lastXPosInMeters) {
@@ -41,11 +43,32 @@ public class AssaultCourse004Agent : MujocoAgent {
             _lastXPosInMeters = newXPosInMeters;
         }
 
-        var terminate = TerminateOnNonFootHitTerrain();
+        var terminate = _pain > 5f;
         if (terminate)
             _assaultCourse004TerrainAgent.Terminate(true);
 
         return terminate;
+    }
+    public override void OnTerrainCollision(GameObject other, GameObject terrain) {
+        if (string.Compare(terrain.name, "Terrain", true) != 0)
+            return;
+        
+        switch (other.name.ToLowerInvariant().Trim())
+        {
+            case "thigh": // dm_hopper
+            case "pelvis": // dm_hopper
+                _pain += 1f;
+                NonFootHitTerrain = true;
+                break;
+            case "foot": // dm_hopper
+            case "calf": // dm_hopper
+                FootHitTerrain = true;
+                break;
+            default:
+                _pain += 5f;
+                NonFootHitTerrain = true;
+                break;
+        }
     }
 
 
@@ -111,18 +134,26 @@ public class AssaultCourse004Agent : MujocoAgent {
 
         //var uprightScaler = Mathf.Clamp(velocity,0,1);
         //uprightBonus *= 0f;//uprightScaler;
+        if (_pain > 0f){
+            uprightBonus = 0f;
+        }
 
         var reward = velocity
             +uprightBonus
             // -heightPenality
             -effortPenality
-            -jointsAtLimitPenality;
+            -jointsAtLimitPenality
+            -_pain
+            ;
         if (ShowMonitor) {
             // var hist = new []{reward,velocity,uprightBonus,-heightPenality,-effortPenality}.ToList();
-            var hist = new []{reward, velocity, uprightBonus, -effortPenality, -jointsAtLimitPenality}.ToList();
+            var hist = new []{reward, velocity, uprightBonus, -effortPenality, 
+            -jointsAtLimitPenality,
+            -_pain
+            }.ToList();
             Monitor.Log("rewardHist", hist.ToArray());
         }
-
+        _pain = _pain - 0.01f;
         return reward;
     }
 }

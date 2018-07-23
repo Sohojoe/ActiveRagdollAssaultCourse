@@ -391,7 +391,7 @@ namespace MujocoUnity
             }
             return angleFromUp; 
         }
-        public void OnTerrainCollision(GameObject other, GameObject terrain) {
+        public virtual void OnTerrainCollision(GameObject other, GameObject terrain) {
             if (string.Compare(terrain.name, "Terrain", true) != 0)
                 return;
             

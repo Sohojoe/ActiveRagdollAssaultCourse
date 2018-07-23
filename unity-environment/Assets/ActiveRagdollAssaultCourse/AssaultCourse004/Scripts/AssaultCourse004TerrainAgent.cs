@@ -58,6 +58,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 		SetNextHeight(0);
 		SetNextHeight(0);
 		SetNextHeight(0);
+		SetNextHeight(0);
 
 		lastSteps = _assaultCourse004Agent.GetStepCount();
 		//RequestDecision();
@@ -76,9 +77,9 @@ public class AssaultCourse004TerrainAgent : Agent {
 	void SetNextHeight(int action)
 	{
 		float actionSize = 0f;
+		bool actionPos = (action-1) % 2 == 0;
 		if (action != 0)
 		{
-			bool actionPos = (action-1) % 2 == 0;
 			actionSize = ((float)((action+1)/2)) * 0.1f;
 			_curHeight += actionPos ? actionSize : -actionSize;
 			if (_curHeight < 0) {
@@ -93,6 +94,8 @@ public class AssaultCourse004TerrainAgent : Agent {
 
 		_heightIndex++;
 		_actionReward = actionSize;
+		if (_actionReward != 0 && actionPos)
+			_actionReward *= 2f; // boost reward for uphill
 	}
 	internal void OnNextMeter()
 	{
