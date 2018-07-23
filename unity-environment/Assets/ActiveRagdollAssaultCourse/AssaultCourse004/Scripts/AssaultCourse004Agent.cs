@@ -33,6 +33,7 @@ public class AssaultCourse004Agent : MujocoAgent {
         _pain = 0f;
 
         base.SetupBodyParts();
+        SetCenterOfMass();
     }
 
     bool LocalTerminate()
@@ -43,7 +44,13 @@ public class AssaultCourse004Agent : MujocoAgent {
             _lastXPosInMeters = newXPosInMeters;
         }
 
-        var terminate = _pain > 5f;
+        SetCenterOfMass();
+        var xpos = _centerOfMass.x;
+        var terminate = false;
+        if (xpos < 4f && _pain > 1f)
+            terminate = true;
+        else if (xpos < 2f && _pain > 0f)
+            terminate = true;
         if (terminate)
             _assaultCourse004TerrainAgent.Terminate(true);
 
@@ -75,7 +82,7 @@ public class AssaultCourse004Agent : MujocoAgent {
     public override void AgentOnDone()
     {
     }    
-        void ObservationsDefault()
+    void ObservationsDefault()
     {
         if (ShowMonitor) {
         }
@@ -122,6 +129,22 @@ public class AssaultCourse004Agent : MujocoAgent {
         AddVectorObs(fraction);
     }
 
+    Vector3 _centerOfMass;
+
+    void SetCenterOfMass()
+    {
+        _centerOfMass = Vector3.zero;
+        float c = 0f;
+        var bodyParts = this.gameObject.GetComponentsInChildren<Rigidbody>();
+ 
+        foreach (var part in bodyParts)
+        {
+            _centerOfMass += part.worldCenterOfMass * part.mass;
+            c += part.mass;
+        }
+        _centerOfMass /= c;
+    }
+
     float StepRewardHopper101()
     {
         // float heightPenality = GetHeightPenality(0.5f);
@@ -153,7 +176,7 @@ public class AssaultCourse004Agent : MujocoAgent {
             }.ToList();
             Monitor.Log("rewardHist", hist.ToArray());
         }
-        _pain = _pain - 0.01f;
+        _pain = 0f;
         return reward;
     }
 }
