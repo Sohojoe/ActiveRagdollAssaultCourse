@@ -36,7 +36,7 @@ AssaultCourse004Brain:
 AssaultCourse004TerrainBrain:
     use_recurrent: true
     sequence_length: 64
-    normalize: true
+    # normalize: true
     num_layers: 2
     hidden_units: 64
     memory_size: 256
