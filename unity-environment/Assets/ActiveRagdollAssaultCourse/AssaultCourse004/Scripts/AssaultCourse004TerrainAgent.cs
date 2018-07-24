@@ -85,6 +85,13 @@ public class AssaultCourse004TerrainAgent : Agent {
 			if (_curHeight < 0) {
 				_curHeight = 0f;
 				actionSize = 0;
+				AddReward(-1f);
+			}
+			if (_curHeight > _maxHeight)
+			{
+				_curHeight = _maxHeight;
+				actionSize = 0;
+				AddReward(-1f);				
 			}
 		}
 
@@ -113,12 +120,14 @@ public class AssaultCourse004TerrainAgent : Agent {
 
 	public override void CollectObservations()
 	{
+		var height = _curHeight / _maxHeight;
 		// add last agent distance
 		var curSteps = _assaultCourse004Agent.GetStepCount();
 		var numberSinceLast = curSteps - lastSteps;
+		numberSinceLast = 1 - (numberSinceLast/1000);
 		lastSteps = curSteps;
         AddVectorObs(numberSinceLast);
-        AddVectorObs(_curHeight);
+        AddVectorObs(height);
         AddVectorObs(_actionReward);
 	}
 	public override void AgentAction(float[] vectorAction, string textAction)
