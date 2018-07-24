@@ -11,6 +11,7 @@ public class AssaultCourse004Agent : MujocoAgent {
     AssaultCourse004TerrainAgent _assaultCourse004TerrainAgent;
     int _lastXPosInMeters;
     float _pain;
+    bool _modeRecover;
     public override void AgentReset()
     {
         base.AgentReset();
@@ -31,6 +32,7 @@ public class AssaultCourse004Agent : MujocoAgent {
         ObservationsFunction = ObservationsDefault;
         // OnTerminateRewardValue = -100f;
         _pain = 0f;
+        _modeRecover = false;
 
         base.SetupBodyParts();
         SetCenterOfMass();
@@ -66,6 +68,7 @@ public class AssaultCourse004Agent : MujocoAgent {
             case "pelvis": // dm_hopper
                 _pain += 1f;
                 NonFootHitTerrain = true;
+                _modeRecover = true;
                 break;
             case "foot": // dm_hopper
             case "calf": // dm_hopper
@@ -74,6 +77,7 @@ public class AssaultCourse004Agent : MujocoAgent {
             default:
                 _pain += 5f;
                 NonFootHitTerrain = true;
+                _modeRecover = true;
                 break;
         }
     }
@@ -159,6 +163,10 @@ public class AssaultCourse004Agent : MujocoAgent {
         //uprightBonus *= 0f;//uprightScaler;
         if (_pain > 0f){
             uprightBonus = 0f;
+        }
+        if (_modeRecover) {
+            uprightBonus = 0f;
+            effortPenality = 0f;
         }
 
         var reward = velocity
