@@ -8,6 +8,7 @@ public class AssaultCourse004TerrainAgent : Agent {
     Terrain terrain;
 	int lastSteps;
 	AssaultCourse004Agent _assaultCourse004Agent;
+	AssaultCourse004WalkerAgent _assaultCourse004WalkerAgent;
 
 
 	int _posXInTerrain;
@@ -29,7 +30,9 @@ public class AssaultCourse004TerrainAgent : Agent {
             this.terrain = Terrain.activeTerrain;
 		if (this._assaultCourse004Agent == null)
 			_assaultCourse004Agent = GetComponent<AssaultCourse004Agent>();
-        print($"HeightMap {this.terrain.terrainData.heightmapWidth}, {this.terrain.terrainData.heightmapHeight}. Scale {this.terrain.terrainData.heightmapScale}. Resolution {this.terrain.terrainData.heightmapResolution}");
+		if (this._assaultCourse004WalkerAgent == null)
+			_assaultCourse004WalkerAgent = GetComponent<AssaultCourse004WalkerAgent>();
+        //print($"HeightMap {this.terrain.terrainData.heightmapWidth}, {this.terrain.terrainData.heightmapHeight}. Scale {this.terrain.terrainData.heightmapScale}. Resolution {this.terrain.terrainData.heightmapResolution}");
         _mapScaleY = this.terrain.terrainData.heightmapScale.y;
 		// get the normalized position of this game object relative to the terrain
         Vector3 tempCoord = (transform.position - terrain.gameObject.transform.position);
@@ -61,7 +64,7 @@ public class AssaultCourse004TerrainAgent : Agent {
 		SetNextHeight(0);
 		SetNextHeight(0);
 
-		lastSteps = _assaultCourse004Agent.GetStepCount();
+		lastSteps = 0;
 		//RequestDecision();
 	}
 
@@ -112,14 +115,12 @@ public class AssaultCourse004TerrainAgent : Agent {
 		_actionReward = 0f;
 		RequestDecision();
 	}
-	internal void Terminate(bool withError)
+	internal void Terminate(float cumulativeReward)
 	{
-		// if (withError)
-		// 	AddReward(-1);
 		if (this.IsDone())
 			return;
 		var maxReward = 1000f;
-		var agentReward = _assaultCourse004Agent.GetCumulativeReward();
+		var agentReward = cumulativeReward;
 		agentReward = Mathf.Clamp(agentReward, 0f, maxReward);
 		var adverseralReward = maxReward - agentReward;
 		AddReward(adverseralReward);
@@ -130,7 +131,12 @@ public class AssaultCourse004TerrainAgent : Agent {
 	{
 		var height = _curHeight / _maxHeight;
 		// add last agent distance
-		var curSteps = _assaultCourse004Agent.GetStepCount();
+		
+		int curSteps = 0;
+		if (_assaultCourse004Agent != null)
+			curSteps = _assaultCourse004Agent.GetStepCount();
+		else if (_assaultCourse004WalkerAgent != null)
+			curSteps = _assaultCourse004WalkerAgent.GetStepCount();
 		var numberSinceLast = curSteps - lastSteps;
 		numberSinceLast = 1 - (numberSinceLast/1000);
 		lastSteps = curSteps;

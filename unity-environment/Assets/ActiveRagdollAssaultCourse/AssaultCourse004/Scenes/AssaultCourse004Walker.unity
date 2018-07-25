@@ -1,0 +1,1682 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.496413, b: 0.5748175, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &24605918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  keyContinuousPlayerActions: []
+  axisContinuousPlayerActions: []
+  discretePlayerActions:
+  - key: 0
+    value: 0
+  - key: 113
+    value: 1
+  - key: 97
+    value: 2
+  - key: 119
+    value: 3
+  - key: 0
+    value: 0
+  - key: 115
+    value: 4
+  - key: 101
+    value: 5
+  - key: 100
+    value: 6
+  - key: 114
+    value: 7
+  - key: 102
+    value: 8
+  - key: 114
+    value: 9
+  - key: 102
+    value: 10
+  - key: 116
+    value: 11
+  - key: 103
+    value: 12
+  - key: 121
+    value: 13
+  - key: 104
+    value: 14
+  - key: 117
+    value: 15
+  - key: 106
+    value: 16
+  - key: 105
+    value: 17
+  - key: 107
+    value: 18
+  - key: 111
+    value: 19
+  - key: 108
+    value: 20
+  defaultAction: 0
+  brain: {fileID: 693942815}
+--- !u!1001 &187049361
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &190574494
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &238018166
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &467517616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  brain: {fileID: 693942815}
+--- !u!114 &489427715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  keyContinuousPlayerActions: []
+  axisContinuousPlayerActions: []
+  discretePlayerActions: []
+  defaultAction: 0
+  brain: {fileID: 846768605}
+--- !u!1001 &585836650
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &658985649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  brain: {fileID: 0}
+--- !u!1 &693942813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693942814}
+  - component: {fileID: 693942815}
+  m_Layer: 0
+  m_Name: AssaultCourse004TerrainBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &693942814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693942813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1574236049}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &693942815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693942813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brainParameters:
+    vectorObservationSize: 3
+    numStackedVectorObservations: 1
+    vectorActionSize: 21
+    cameraResolutions: []
+    vectorActionDescriptions:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    vectorActionSpaceType: 0
+  brainType: 2
+  CoreBrains:
+  - {fileID: 24605918}
+  - {fileID: 467517616}
+  - {fileID: 1006102549}
+  - {fileID: 721395906}
+  instanceID: 14166
+--- !u!1001 &695563481
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252710576021212, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da6d2e2684720479b91fd527c2d6eaef, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &721395906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 0
+  graphModel: {fileID: 4900000, guid: fccbdae0b6f679f4ab12a2cb24e100d7, type: 3}
+  graphScope: AssaultCourse004TerrainBrain
+  graphPlaceholders: []
+  BatchSizePlaceholderName: batch_size
+  VectorObservationPlacholderName: vector_observation
+  RecurrentInPlaceholderName: recurrent_in
+  RecurrentOutPlaceholderName: recurrent_out
+  VisualObservationPlaceholderName: []
+  ActionPlaceholderName: action
+  PreviousActionPlaceholderName: prev_action
+  brain: {fileID: 693942815}
+--- !u!1 &762086410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 762086412}
+  - component: {fileID: 762086411}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &762086411
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762086410}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10000
+  m_SpotAngle: 179
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &762086412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762086410}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &846768603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846768604}
+  - component: {fileID: 846768605}
+  m_Layer: 0
+  m_Name: AssaultCourse004WalkerBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846768604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846768603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1574236049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846768605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846768603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brainParameters:
+    vectorObservationSize: 69
+    numStackedVectorObservations: 1
+    vectorActionSize: 6
+    cameraResolutions: []
+    vectorActionDescriptions:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    vectorActionSpaceType: 1
+  brainType: 2
+  CoreBrains:
+  - {fileID: 489427715}
+  - {fileID: 658985649}
+  - {fileID: 1391120412}
+  - {fileID: 1448689026}
+  instanceID: 14202
+--- !u!1001 &929194923
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 24.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &1006102549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  brain: {fileID: 693942815}
+--- !u!1001 &1040227007
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1146633687
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1211839580
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: CameraTarget
+      value: 
+      objectReference: {fileID: 1715640920}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: ShowMonitor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &1391120412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  brain: {fileID: 846768605}
+--- !u!114 &1448689026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 0
+  graphModel: {fileID: 4900000, guid: fccbdae0b6f679f4ab12a2cb24e100d7, type: 3}
+  graphScope: AssaultCourse004Brain
+  graphPlaceholders: []
+  BatchSizePlaceholderName: batch_size
+  VectorObservationPlacholderName: vector_observation
+  RecurrentInPlaceholderName: recurrent_in
+  RecurrentOutPlaceholderName: recurrent_out
+  VisualObservationPlaceholderName: []
+  ActionPlaceholderName: action
+  PreviousActionPlaceholderName: prev_action
+  brain: {fileID: 846768605}
+--- !u!1001 &1540192838
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1574236047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1574236049}
+  - component: {fileID: 1574236048}
+  m_Layer: 0
+  m_Name: Academy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1574236048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574236047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af83cd96d4bc4088a966af174446d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSteps: 0
+  trainingConfiguration:
+    width: 480
+    height: 300
+    qualityLevel: 0
+    timeScale: 10
+    targetFrameRate: -1
+  inferenceConfiguration:
+    width: 1280
+    height: 720
+    qualityLevel: 5
+    timeScale: 1
+    targetFrameRate: 60
+  resetParameters:
+    resetParameters: []
+--- !u!4 &1574236049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574236047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.71938086, y: 0.27357092, z: 4.1970553}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 846768604}
+  - {fileID: 693942814}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1576016389
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1585332955
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 20.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1660698158
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1715640920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715640925}
+  - component: {fileID: 1715640924}
+  - component: {fileID: 1715640923}
+  - component: {fileID: 1715640922}
+  - component: {fileID: 1715640921}
+  - component: {fileID: 1715640926}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1715640921
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_Enabled: 1
+--- !u!124 &1715640922
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_Enabled: 1
+--- !u!92 &1715640923
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_Enabled: 1
+--- !u!20 &1715640924
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1715640925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715640926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1715640920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb3e52e2181b461dbdeec083f420f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  distance: 2.125
+  height: 0.2
+  clampToFloor: 0
+  heightDamping: 5
+  rotationDamping: 0
+--- !u!1001 &1895168925
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2063740741
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2064291565
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2140550575
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132043790615226, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197355327420184, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+      propertyPath: m_Name
+      value: AssaultCourse004Walker (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114477179398205770, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    - target: {fileID: 114441188133692580, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 693942815}
+    - target: {fileID: 114187747890245700, guid: fafdc7406116e4755a6956e32ba5b852,
+        type: 2}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 846768605}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fafdc7406116e4755a6956e32ba5b852, type: 2}
+  m_IsPrefabAsset: 0

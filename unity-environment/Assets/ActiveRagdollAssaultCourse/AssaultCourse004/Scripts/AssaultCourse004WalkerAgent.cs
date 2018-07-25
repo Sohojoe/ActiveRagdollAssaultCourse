@@ -5,23 +5,31 @@ using System.Linq;
 using MujocoUnity;
 using UnityEngine;
 using MLAgents;
-
-public class AssaultCourse004Agent : MujocoAgent {
+public class AssaultCourse004WalkerAgent : MujocoAgent {
 
     AssaultCourse004TerrainAgent _assaultCourse004TerrainAgent;
     int _lastXPosInMeters;
     float _pain;
     bool _modeRecover;
+    Vector3 _centerOfMass;
+
     public override void AgentReset()
     {
         base.AgentReset();
 
         BodyParts["pelvis"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="torso");
-        BodyParts["foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="foot");
+        BodyParts["left_thigh"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="left_thigh");
+        BodyParts["right_thigh"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="right_thigh");
+        BodyParts["left_leg"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="left_leg");
+        BodyParts["right_leg"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="right_leg");
+        BodyParts["left_foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="left_foot");
+        BodyParts["right_foot"] = GetComponentsInChildren<Rigidbody>().FirstOrDefault(x=>x.name=="right_foot");
+
+        SetCenterOfMass();
 
         if (_assaultCourse004TerrainAgent == null)
             _assaultCourse004TerrainAgent = GetComponent<AssaultCourse004TerrainAgent>();
-        _lastXPosInMeters = (int) (int) BodyParts["foot"].transform.position.x;
+        _lastXPosInMeters = (int) _centerOfMass.x;
         _assaultCourse004TerrainAgent.Terminate(GetCumulativeReward());
 
         // set to true this to show monitor while training
@@ -40,7 +48,7 @@ public class AssaultCourse004Agent : MujocoAgent {
 
     bool LocalTerminate()
     {
-        int newXPosInMeters = (int) BodyParts["foot"].transform.position.x;
+        int newXPosInMeters = (int) _centerOfMass.x;
         if (newXPosInMeters > _lastXPosInMeters) {
             _assaultCourse004TerrainAgent.OnNextMeter();
             _lastXPosInMeters = newXPosInMeters;
@@ -61,17 +69,20 @@ public class AssaultCourse004Agent : MujocoAgent {
     public override void OnTerrainCollision(GameObject other, GameObject terrain) {
         if (string.Compare(terrain.name, "Terrain", true) != 0)
             return;
-        
+
         switch (other.name.ToLowerInvariant().Trim())
         {
-            case "thigh": // dm_hopper
-            case "pelvis": // dm_hopper
+            case "left_thigh": 
+            case "right_thigh": 
+            case "torso": 
                 _pain += 5f;
                 NonFootHitTerrain = true;
                 _modeRecover = true;
                 break;
-            case "foot": // dm_hopper
-            case "calf": // dm_hopper
+            case "left_foot":
+            case "right_foot":
+            case "left_leg":
+            case "right_leg":
                 FootHitTerrain = true;
                 break;
             default:
@@ -98,13 +109,13 @@ public class AssaultCourse004Agent : MujocoAgent {
         AddVectorObs(SensorIsInTouch);
         JointRotations.ForEach(x=>AddVectorObs(x));
         AddVectorObs(JointVelocity);
-        var foot = BodyParts["foot"];
-        AddVectorObs(foot.transform.position.y);
+        AddVectorObs(BodyParts["left_foot"].transform.position.y / AssaultCourse004TerrainAgent._maxHeight);
+        AddVectorObs(BodyParts["right_foot"].transform.position.y / AssaultCourse004TerrainAgent._maxHeight);
 
-        var xpos = foot.transform.position.x;
+        var xpos = pelvis.transform.position.x;
         xpos -= 2f;
         float fraction = (xpos - (Mathf.Floor(xpos*5)/5)) * 5;
-        float ypos = foot.transform.position.y;
+        float ypos = pelvis.transform.position.y;
         List<Ray> rays = Enumerable.Range(0, 5*5).Select(x => new Ray(new Vector3(xpos+(x*.2f), AssaultCourse004TerrainAgent._maxHeight, 0f), Vector3.down)).ToList();
         List<float> distances = rays.Select
             ( x=>
@@ -133,7 +144,6 @@ public class AssaultCourse004Agent : MujocoAgent {
         AddVectorObs(fraction);
     }
 
-    Vector3 _centerOfMass;
 
     void SetCenterOfMass()
     {
@@ -151,22 +161,21 @@ public class AssaultCourse004Agent : MujocoAgent {
 
     float StepRewardHopper101()
     {
-        // float heightPenality = GetHeightPenality(0.5f);
+        // float heightPenality = GetHeightPenality(1.1f);
         float uprightBonus = GetForwardBonus("pelvis");
         float velocity = GetVelocity("pelvis");
         float effort = GetEffort();
-        // var effortPenality = 1e-2f * (float)effort;
-        var effortPenality = 3e-1f * (float)effort;
+        // var effortPenality = 1e-3f * (float)effort;
+        var effortPenality = 1e-1f * (float)effort;
         var jointsAtLimitPenality = GetJointsAtLimitPenality() * 4;
 
-        //var uprightScaler = Mathf.Clamp(velocity,0,1);
-        //uprightBonus *= 0f;//uprightScaler;
         if (_pain > 0f){
             uprightBonus = 0f;
         }
         if (_modeRecover) {
             uprightBonus = 0f;
             effortPenality = 0f;
+            velocity *=2;
         }
 
         var reward = velocity
