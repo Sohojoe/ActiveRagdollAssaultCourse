@@ -107,15 +107,22 @@ public class AssaultCourse004TerrainAgent : Agent {
 	}
 	internal void OnNextMeter()
 	{
-		AddReward(1);
-		AddReward(_actionReward);
+		// AddReward(1);
+		// AddReward(_actionReward);
 		_actionReward = 0f;
 		RequestDecision();
 	}
 	internal void Terminate(bool withError)
 	{
-		if (withError)
-			AddReward(-1);
+		// if (withError)
+		// 	AddReward(-1);
+		if (this.IsDone())
+			return;
+		var maxReward = 1000f;
+		var agentReward = _assaultCourse004Agent.GetCumulativeReward();
+		agentReward = Mathf.Clamp(agentReward, 0f, maxReward);
+		var adverseralReward = maxReward - agentReward;
+		AddReward(adverseralReward);
 		Done();
 	}
 

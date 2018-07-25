@@ -66,7 +66,7 @@ public class AssaultCourse004Agent : MujocoAgent {
         {
             case "thigh": // dm_hopper
             case "pelvis": // dm_hopper
-                _pain += 1f;
+                _pain += 5f;
                 NonFootHitTerrain = true;
                 _modeRecover = true;
                 break;
