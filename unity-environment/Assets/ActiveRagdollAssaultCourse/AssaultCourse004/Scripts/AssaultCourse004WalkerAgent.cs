@@ -29,7 +29,7 @@ public class AssaultCourse004WalkerAgent : MujocoAgent {
 
         if (_assaultCourse004TerrainAgent == null)
             _assaultCourse004TerrainAgent = GetComponent<AssaultCourse004TerrainAgent>();
-        _lastXPosInMeters = (int) _centerOfMass.x;
+        _lastXPosInMeters = (int) ((BodyParts["left_foot"].transform.position.x + BodyParts["right_foot"].transform.position.x)/2);
         _assaultCourse004TerrainAgent.Terminate(GetCumulativeReward());
 
         // set to true this to show monitor while training
@@ -48,14 +48,14 @@ public class AssaultCourse004WalkerAgent : MujocoAgent {
 
     bool LocalTerminate()
     {
-        int newXPosInMeters = (int) _centerOfMass.x;
+        int newXPosInMeters = (int) ((BodyParts["left_foot"].transform.position.x + BodyParts["right_foot"].transform.position.x)/2);;
         if (newXPosInMeters > _lastXPosInMeters) {
             _assaultCourse004TerrainAgent.OnNextMeter();
             _lastXPosInMeters = newXPosInMeters;
         }
 
         SetCenterOfMass();
-        var xpos = _centerOfMass.x;
+        var xpos = ((BodyParts["left_foot"].transform.position.x + BodyParts["right_foot"].transform.position.x)/2);;
         var terminate = false;
         if (xpos < 4f && _pain > 1f)
             terminate = true;
@@ -175,7 +175,6 @@ public class AssaultCourse004WalkerAgent : MujocoAgent {
         if (_modeRecover) {
             uprightBonus = 0f;
             effortPenality = 0f;
-            velocity *=2;
         }
 
         var reward = velocity

@@ -24,7 +24,6 @@ default:
 
 AssaultCourse004Brain:
     beta: 1.0e-2
-    # learning_rate: 1.0e-3
     time_horizon: 1000
     summary_freq: 1000
     normalize: true
@@ -33,6 +32,16 @@ AssaultCourse004Brain:
     batch_size: 2048
     buffer_size: 10240
     max_steps: 10e5
+AssaultCourse004WalkerBrain:
+    beta: 1.0e-2
+    time_horizon: 1000
+    summary_freq: 1000
+    normalize: true
+    num_layers: 2
+    hidden_units: 256
+    batch_size: 2048
+    buffer_size: 10240
+    max_steps: 50e5
 AssaultCourse004TerrainBrain:
     use_recurrent: true
     sequence_length: 64
@@ -40,7 +49,7 @@ AssaultCourse004TerrainBrain:
     num_layers: 2
     hidden_units: 64
     memory_size: 256
-    max_steps: 10e5
+    max_steps: 50e5
 
 
 AssaultCourse003Brain:
