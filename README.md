@@ -1,14 +1,23 @@
 # ActiveRagdollAssaultCourse
 Research into Assault Course for training Active Ragdolls (using MujocoUnity+ml_agents)
 
+----
+
 #### Contributors
 * Joe Booth ([SohoJoe](https://github.com/Sohojoe))
 * Jackson Booth ([JacksonJabba](https://github.com/jacksonJabba))
 
+----
+
+#### Download builds (Mac, Windows): [001 through 004-Walker](https://github.com/Sohojoe/ActiveRagdollAssaultCourse/releases/tag/0.004)
+
+
+----
+
 ## AssaultCourse004-Walker
 ![AssaultCourse004-Walker](images/AssaultCourse004Walker.202-10m.gif)
 * **Mujoco Model:** DeepMindWalker
-* **Hypostheis:** Adverserial trainer will scale to more complex models
+* **Hypostheis:** Adversarial Trainer will scale to more complex models
 * **Outcome:** Worked well.
 * **Raw Notes:**
   * July 27 2018: Compared recurrent vs no recurrent over 1m training steps with two training runs each. **Recurrent was 25% improvement over non-recurrent** (recurrent score 440 & 424 so 432. Non-recurrent score 357 & 331 so 344) Note: is slower to train
@@ -26,8 +35,8 @@ Research into Assault Course for training Active Ragdolls (using MujocoUnity+ml_
 ## AssaultCourse004-Hopper
 ![AssaultCourse004-Hopper](images/AssaultCourse004.203.gif)
 * **Mujoco Model:** DeepMindHopper
-* **Hypostheis:** Dynamically adapting terrain will improve robustness and performance. Compare hand coded logic, vs random, vs adverserial network
-* **Outcome:** Adverserial network (using inverse reward from hopper brain) is less complex and signifcantly more effective.
+* **Hypostheis:** Dynamically adapting terrain will improve robustness and performance. Compare hand coded logic, vs random, vs Adversarial Trainer
+* **Outcome:** Adversarial Trainer (using inverse reward from hopper brain) is less complex and signifcantly more effective.
 * **Raw Notes:**
   * July 24 2018: 004.203 - use an adversarial network for the 2nd trainer - **worked really well!!**
   * TODO ADD image Compared to 202 Add image
