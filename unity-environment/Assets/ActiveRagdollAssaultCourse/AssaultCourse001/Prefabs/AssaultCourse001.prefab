@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1197355327420184}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1197355327420184
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4132043790615226}
   - component: {fileID: 114269483692438478}
@@ -31,7 +31,7 @@ GameObject:
 --- !u!4 &4132043790615226
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197355327420184}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
@@ -44,18 +44,18 @@ Transform:
 --- !u!114 &114269483692438478
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197355327420184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a532e373957504411bd01901bf361ad3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e8c1aa030e1b46e1b16e43d676f4f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MujocoXml: {fileID: 4900000, guid: 25b575bef22a8461faeeb3edf758e864, type: 3}
-  Material: {fileID: 2100000, guid: 9013613e105254620b29c7301046af30, type: 2}
-  PhysicMaterial: {fileID: 13400000, guid: 38b7ea504254a4fa986e42a7bb16c8df, type: 2}
-  UseMujocoTimestep: 1
+  Xml: {fileID: 4900000, guid: 25b575bef22a8461faeeb3edf758e864, type: 3}
+  Material: {fileID: 2100000, guid: ebc1254c43ecf4d329aa4287b30f81b4, type: 2}
+  PhysicMaterial: {fileID: 13400000, guid: 71eda9a1061a841b7b80e79319eb7d53, type: 2}
+  UseXmlTimestep: 1
   DebugOutput: 0
   Force2D: 1
   OnGenerateApplyRandom: 0.005
@@ -64,7 +64,7 @@ MonoBehaviour:
 --- !u!114 &114664362868665726
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197355327420184}
   m_Enabled: 1
@@ -90,8 +90,5 @@ MonoBehaviour:
   FocalPointMaxDistanceTraveled: 0
   JointVelocity: []
   JointRotations: []
-  MujocoJoints: []
-  MujocoSensors: []
-  TargetVelocityX: 0
-  CurrentVelocityX: 0
-  StepsUntilNextTarget: 0
+  MarathonJoints: []
+  MarathonSensors: []

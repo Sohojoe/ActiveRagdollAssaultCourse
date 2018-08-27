@@ -2,11 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using MujocoUnity;
 using UnityEngine;
 using MLAgents;
 
-public class AssaultCourse003Agent : MujocoAgent {
+public class AssaultCourse003Agent : MarathonAgent {
 
     Terrain terrain;
     public override void AgentReset()

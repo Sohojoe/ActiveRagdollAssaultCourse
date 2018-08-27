@@ -2,11 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using MujocoUnity;
 using UnityEngine;
 using MLAgents;
 
-public class AssaultCourse004Agent : MujocoAgent {
+public class AssaultCourse004Agent : MarathonAgent {
 
     AssaultCourse004TerrainAgent _assaultCourse004TerrainAgent;
     int _lastXPosInMeters;

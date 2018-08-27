@@ -2,11 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using MujocoUnity;
 using UnityEngine;
 using MLAgents;
 
-public class AssaultCourse001Agent : MujocoAgent {
+public class AssaultCourse001Agent : MarathonAgent {
     public override void AgentReset()
     {
         base.AgentReset();

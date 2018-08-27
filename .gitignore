@@ -75,7 +75,15 @@ python/summaries
 *.eggs*
 *.gitignore.swp
 
+# xml files for Continuous Control 
+!unity-environment/Assets/ML-Agents/Examples/ContinuousControl/**/*.xml
+!unity-environment/Assets/**/*.xml
+
+# VSCode hidden files
+*.vscode/
 
 .DS_Store
-!unity-environment/Assets/ML-Agents/Examples/MujocoUnity/**/*.xml
-python/humanoid**
+.ipynb_checkpoints
+
+# pytest cache 
+*.pytest_cache/
