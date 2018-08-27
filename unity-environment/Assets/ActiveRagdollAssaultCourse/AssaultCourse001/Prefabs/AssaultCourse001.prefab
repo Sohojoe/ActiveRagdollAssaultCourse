@@ -49,12 +49,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1197355327420184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e8c1aa030e1b46e1b16e43d676f4f04, type: 3}
+  m_Script: {fileID: 11500000, guid: a532e373957504411bd01901bf361ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Xml: {fileID: 4900000, guid: 25b575bef22a8461faeeb3edf758e864, type: 3}
-  Material: {fileID: 2100000, guid: ebc1254c43ecf4d329aa4287b30f81b4, type: 2}
-  PhysicMaterial: {fileID: 13400000, guid: 71eda9a1061a841b7b80e79319eb7d53, type: 2}
+  Material: {fileID: 2100000, guid: 9013613e105254620b29c7301046af30, type: 2}
+  PhysicMaterial: {fileID: 13400000, guid: 38b7ea504254a4fa986e42a7bb16c8df, type: 2}
   UseXmlTimestep: 1
   DebugOutput: 0
   Force2D: 1

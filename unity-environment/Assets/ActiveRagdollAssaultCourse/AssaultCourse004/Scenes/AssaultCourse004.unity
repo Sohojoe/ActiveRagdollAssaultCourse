@@ -789,7 +789,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142814094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d426c818948c4d2386689737e03be68, type: 3}
+  m_Script: {fileID: 11500000, guid: 68231b96042614ce992397230a3bb5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!154 &1142814096
@@ -799,7 +799,7 @@ TerrainCollider:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1142814094}
-  m_Material: {fileID: 13400000, guid: a50fac0f1f6e447a0afdb4db945d5ee4, type: 2}
+  m_Material: {fileID: 13400000, guid: b9c123ed1464e44adbfe0f4b3a874890, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 366f98a27c23e46689a3d24f9815f4d6, type: 2}
   m_EnableTreeColliders: 1
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715640920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8ed626949024885a2b32e4e1f5fda1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb3e52e2181b461dbdeec083f420f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
