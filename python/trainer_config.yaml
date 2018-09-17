@@ -21,82 +21,50 @@ default:
     curiosity_strength: 0.01
     curiosity_enc_size: 128
 
-Controller004WalkerBrain:
-    beta: 1.0e-2
-    # learning_rate: 1.0e-3
-    time_horizon: 128
-    summary_freq: 1000
-    normalize: true
-    num_layers: 2
-    hidden_units: 90
-    batch_size: 2048
-    buffer_size: 10240
-    max_steps: 100e5
 
-Controller004Brain:
+AssaultCourse004Brain:
     beta: 1.0e-2
-    # learning_rate: 1.0e-3
-    time_horizon: 128
-    summary_freq: 1000
-    normalize: true
-    num_layers: 2
-    hidden_units: 90
-    batch_size: 2048
-    buffer_size: 10240
-    max_steps: 3e5
-
-Controller103Brain:
-    beta: 1.0e-2
-    epsilon: 0.20
-    gamma: 0.99
-    lambd: 0.95
-    learning_rate: 1.0e-3
-    num_epoch: 3
-    time_horizon: 128
-    summary_freq: 1000
-    use_recurrent: false
-    normalize: true
-    num_layers: 2
-    hidden_units: 90
-    batch_size: 2048
-    buffer_size: 10240
-    max_steps: 3e5
-
-Controller003InputBrain:
-    beta: 1.0e-2
-    epsilon: 0.20
-    gamma: 0.99
-    lambd: 0.95
-    learning_rate: 1.0e-3
-    num_epoch: 3
     time_horizon: 1000
+    summary_freq: 1000
+    normalize: true
+    num_layers: 2
+    hidden_units: 256
+    batch_size: 2048
+    buffer_size: 10240
+    max_steps: 10e5
+AssaultCourse004WalkerBrain:
+    beta: 1.0e-2
+    time_horizon: 1000
+    summary_freq: 1000
+    normalize: true
+    num_layers: 2
+    hidden_units: 256
+    batch_size: 2048
+    buffer_size: 10240
+    max_steps: 10e5
+AssaultCourse004TerrainBrain:
     # use_recurrent: true
     # sequence_length: 64
-    # memory_size: 256    
+    # normalize: true
     num_layers: 2
-    hidden_units: 32
-    batch_size: 2048
-    buffer_size: 10240
-    max_steps: 3e5        
+    hidden_units: 64
+    # memory_size: 256
+    max_steps: 10e5
 
-Controller102Brain:
+
+AssaultCourse003Brain:
     beta: 1.0e-2
-    epsilon: 0.20
-    gamma: 0.99
-    lambd: 0.95
     learning_rate: 1.0e-3
-    num_epoch: 3
-    time_horizon: 128
+    time_horizon: 1000
     summary_freq: 1000
-    use_recurrent: false
     normalize: true
     num_layers: 2
-    hidden_units: 90
+    hidden_units: 256
     batch_size: 2048
     buffer_size: 10240
-    max_steps: 3e5   
+    max_steps: 3e5
 
-Controller101Brain:
+AssaultCourse001Brain:
     beta: 1.0e-2
     epsilon: 0.20
     gamma: 0.99
@@ -112,7 +80,10 @@ Controller101Brain:
     batch_size: 2048
     buffer_size: 10240
     max_steps: 3e5
- 
+    # use_curiosity: true
+    # curiosity_strength: 0.01
+    # curiosity_enc_size: 256    
+
 
 DeepMindHumanoidBrain:
     normalize: true
