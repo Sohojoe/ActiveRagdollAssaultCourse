@@ -21,6 +21,7 @@ default:
     curiosity_strength: 0.01
     curiosity_enc_size: 128
 
+
 AssaultCourse004Brain:
     beta: 1.0e-2
     time_horizon: 1000
@@ -82,6 +83,7 @@ AssaultCourse001Brain:
     # use_curiosity: true
     # curiosity_strength: 0.01
     # curiosity_enc_size: 256    
+
 
 DeepMindHumanoidBrain:
     normalize: true
